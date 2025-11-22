@@ -5,8 +5,6 @@ import java.util.Scanner;
 import br.edu.ufrn.lpii.repo.arvore_bst_numeros.ArvoreBST;
 import br.edu.ufrn.lpii.repo.exceptions.ArquivoNaoEncontradoException;
 import br.edu.ufrn.lpii.repo.exceptions.ErroNaReflexaoException;
-import br.edu.ufrn.lpii.repo.exceptions.NumeroNegativoOuNuloException;
-import br.edu.ufrn.lpii.repo.exceptions.NumerosFormatoInvalidosException;
 import br.edu.ufrn.lpii.repo.manipulador_arquivo.ListaArquivos;
 import br.edu.ufrn.lpii.repo.manipulador_arquivo.ManipuladorArquivo;
 
@@ -27,11 +25,7 @@ public class Main {
 			arvore.imprimirArvoreEmOrdem(arvore.getNoRaiz());
 		} catch(ArquivoNaoEncontradoException e) {
 			System.out.println(e);
-		}
-		catch (NumerosFormatoInvalidosException e) {
-			System.out.println(e);
-		} catch (NumeroNegativoOuNuloException e) {
-			System.out.println(e);
+		
 		} catch(ErroNaReflexaoException e) {
 			System.out.println(e);
 		}

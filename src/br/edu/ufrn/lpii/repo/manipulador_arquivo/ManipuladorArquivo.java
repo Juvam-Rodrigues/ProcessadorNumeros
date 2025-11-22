@@ -8,12 +8,11 @@ import java.util.Scanner;
 import br.edu.ufrn.lpii.repo.arvore_bst_numeros.ArvoreBST;
 import br.edu.ufrn.lpii.repo.exceptions.ArquivoNaoEncontradoException;
 import br.edu.ufrn.lpii.repo.exceptions.NumeroNegativoOuNuloException;
-import br.edu.ufrn.lpii.repo.exceptions.NumerosFormatoInvalidosException;
 
 public class ManipuladorArquivo {
 
 	public static void lerArquivo(String nome, ArvoreBST arvore) 
-			throws NumerosFormatoInvalidosException, NumeroNegativoOuNuloException, ArquivoNaoEncontradoException {
+			throws ArquivoNaoEncontradoException {
 
 		List<String> caminhos = ListaArquivos.getCaminhos();
 
@@ -35,8 +34,7 @@ public class ManipuladorArquivo {
 		}
 	}
 
-	public static void preencherEstrutura(String caminho, ArvoreBST arvore)
-			throws NumerosFormatoInvalidosException, NumeroNegativoOuNuloException {
+	public static void preencherEstrutura(String caminho, ArvoreBST arvore){
 		File arquivo = new File(caminho);
 		
 		try (Scanner scanner = new Scanner(arquivo)) {
@@ -51,7 +49,10 @@ public class ManipuladorArquivo {
 					arvore.inserir(atual); //Deu tudo certo! Pode inserir na árvore.
 					
 				} catch (NumberFormatException e) {
-					throw new NumerosFormatoInvalidosException("Erro: número inválido...");
+					System.out.println("Erro: número inválido...");
+				}
+				catch(NumeroNegativoOuNuloException e){
+					System.out.println(e.getMessage());
 				}
 			}
 		} catch (FileNotFoundException e1) {
