@@ -24,10 +24,10 @@ public class Main {
 			System.out.println();
 			arvore.imprimirArvoreEmOrdem(arvore.getNoRaiz());
 		} catch(ArquivoNaoEncontradoException e) {
-			System.out.println(e);
+			System.out.println(e.getMessage());
 		
 		} catch(ErroNaReflexaoException e) {
-			System.out.println(e);
+			System.out.println(e.getMessage());
 		}
 		finally {
 			scan.close();
