@@ -25,16 +25,15 @@ public class Processador {
                     // Procurando método com assinatura: void imprimir(int)
                     if (params.length == 1 && params[0] == int.class && metodo.getReturnType() == void.class) {
                         metodo.invoke(obj, no.getNumero());
-                        return; // Encontrou e executou
                     }
                 }
             }
-
         } catch (ClassNotFoundException | NoSuchMethodException |
-                 InstantiationException | IllegalAccessException |
-                 InvocationTargetException e) {
-            throw new ErroNaReflexaoException("Erro ao usar reflexão");
-        }
+                InstantiationException | IllegalAccessException |
+                InvocationTargetException e) {
+           throw new ErroNaReflexaoException("Erro ao usar reflexão");
+       }
+
     }
 
     public static void dobrarComReflectionAnotation(ArvoreBST arvore) throws ErroNaReflexaoException {
@@ -50,7 +49,6 @@ public class Processador {
                     // Procurando método com assinatura: int dobrar(int)
                     if (params.length == 1 && params[0] == int.class && metodo.getReturnType() == int.class) {
                         arvore.dobrarRecursivo(arvore.getNoRaiz(), obj, metodo);
-                        return;
                     }
                 }
             }
