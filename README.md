@@ -106,5 +106,5 @@ Exemplo (`numeros.txt`):
 <h2>Colaboradores: </h2>
 Este projeto possui por colaborador (principais desenvolvedor):
 <ul>
-    <li>Juvam Rodrigues do Nascimento Neto (https://github.com/Juvam-Rodrigues)./li>
+    <li>Juvam Rodrigues do Nascimento Neto (https://github.com/Juvam-Rodrigues).</li>
 </ul>
