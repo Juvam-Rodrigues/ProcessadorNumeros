@@ -40,9 +40,8 @@ Exemplo (`numeros.txt`):
 <h3> 2. Executar o programa</h3>
     Digite o nome do arquivo seguido de ".txt".
     
-    ```
     Exemplo: `arquivo.txt`
-    ```
+    
 ---
 
 <h3> 3. Visualizar a execução</h3>
