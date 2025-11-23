@@ -55,39 +55,56 @@ Exemplo (`numeros.txt`):
 <h2> Estrutura do projeto</h2>
 
 <ul>
-    <li><strong>src</strong>
+  <li><strong>src</strong>
+    <ul>
       <li>anotacoes
-        <li>Acao.java</li>
-        <li>Processar.java</li>
+        <ul>
+          <li>Acao.java</li>
+          <li>Processar.java</li>
+        </ul>
       </li>
       <li>app
-        <li>Main.java</li>
+        <ul>
+          <li>Main.java</li>
+        </ul>
       </li>
       <li>arvore_bst_numeros
-        <li>ArvoreBST.java</li>
-        <li>No.java</li>
+        <ul>
+          <li>ArvoreBST.java</li>
+          <li>No.java</li>
+        </ul>
       </li>
-      <li>database: aqui ficarão os arquivos a serem lidos.
+      <li>database
+        <ul>
+          <li>Aqui ficarão os arquivos a serem lidos.</li>
+        </ul>
       </li>
       <li>exceptions
-        <li>ArquivoNaoEncontradoException.java</li>
-        <li>ErroNaReflexaoException.java</li>
-        <li>NumeroNegativoOuNuloException.java</li>
+        <ul>
+          <li>ArquivoNaoEncontradoException.java</li>
+          <li>ErroNaReflexaoException.java</li>
+          <li>NumeroNegativoOuNuloException.java</li>
+        </ul>
       </li>
       <li>manipular_arquivo
-        <li>ListaArquivos.java</li>
-        <li>ManipuladorArquivo.java</li>
+        <ul>
+          <li>ListaArquivos.java</li>
+          <li>ManipuladorArquivo.java</li>
+        </ul>
       </li>
       <li>operacoes
-        <li>Operacoes.java</li>
-        <li>Processador.java</li>
+        <ul>
+          <li>Operacoes.java</li>
+          <li>Processador.java</li>
+        </ul>
       </li>
-    </li>
+    </ul>
+  </li>
 </ul>
 
 ---
 <h2>Colaboradores: </h2>
 Este projeto possui por colaborador (principais desenvolvedor):
 <ul>
-    <li>Juvam Rodrigues do Nascimento Neto (https://github.com/Juvam-Rodrigues); e</li>
+    <li>Juvam Rodrigues do Nascimento Neto (https://github.com/Juvam-Rodrigues)./li>
 </ul>
