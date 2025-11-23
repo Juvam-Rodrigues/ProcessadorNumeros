@@ -2,7 +2,7 @@
 
 <h3> Descrição </h3>
 
-Trabalho da Unidade 2 da disciplina **Linguagem de Programação II**, implementando um sistema que lê números de um arquivo `.txt` e os armazena em uma estrutura de dados genérica escolhida (Lista Encadeada, Pilha, Deck ou Árvore Binária de Busca).
+Trabalho da Unidade 2 da disciplina **Linguagem de Programação II**, implementando um sistema que lê números de um arquivo `.txt` e os armazena em uma estrutura de dados genérica escolhida (Árvore Binária de Busca).
 
 O projeto utiliza anotações (`@Processar` e `@Acao`) e reflexão para identificar e executar automaticamente métodos sobre os elementos da estrutura. Inclui tratamento completo de exceções (arquivo inexistente, formato inválido, regra de negócio para números negativos ou zero) e percorre corretamente a estrutura (in-order no caso da árvore).
 
