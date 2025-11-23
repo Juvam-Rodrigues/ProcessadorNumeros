@@ -74,10 +74,7 @@ Exemplo (`numeros.txt`):
           <li>No.java</li>
         </ul>
       </li>
-      <li>database
-        <ul>
-          <li>Aqui ficarão os arquivos a serem lidos.</li>
-        </ul>
+      <li>database: Aqui ficarão os arquivos a serem lidos.</li>
       </li>
       <li>exceptions
         <ul>
