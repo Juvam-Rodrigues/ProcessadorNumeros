@@ -1,54 +1,45 @@
 package br.edu.ufrn.lpii.repo.arvore_bst_numeros;
 
-import java.util.Objects;
+public class No<T extends Comparable<T>> {
 
-public class No {
+	private T numero;           // Valor do nó (antes era int)
+	private No<T> noEsquerdo;  // Ponteiro para esquerda
+	private No<T> noDireito;   // Ponteiro para direita
 
-    private int numero;
-    private No noEsquerdo; // Nó que aponta para o valor menor
-    private No noDireito;  // Nó que aponta para o valor maior
+	public No(T numero) {
+		this.numero = numero;
+	}
 
-    public No(int valor) {
-        this.numero = valor;
-        this.noEsquerdo = null;
-        this.noDireito = null;
-    }
+	public T getNumero() {
+		return numero;
+	}
 
-    public int getNumero() {
-        return numero;
-    }
+	public void setNumero(T numero) {
+		this.numero = numero;
+	}
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
+	public No<T> getNoEsquerdo() {
+		return noEsquerdo;
+	}
 
-    public No getNoEsquerdo() {
-        return noEsquerdo;
-    }
+	public void setNoEsquerdo(No<T> noEsquerdo) {
+		this.noEsquerdo = noEsquerdo;
+	}
 
-    public void setNoEsquerdo(No noEsquerdo) {
-        this.noEsquerdo = noEsquerdo;
-    }
+	public No<T> getNoDireito() {
+		return noDireito;
+	}
 
-    public No getNoDireito() {
-        return noDireito;
-    }
+	public void setNoDireito(No<T> noDireito) {
+		this.noDireito = noDireito;
+	}
 
-    public void setNoDireito(No noDireito) {
-        this.noDireito = noDireito;
-    }
+	// getValor foi renomeado para compatibilizar com seu código antigo (opcional)
+	public T getValor() {
+		return numero;
+	}
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(numero);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null) return false;
-        if (getClass() != obj.getClass()) return false;
-        No other = (No) obj;
-        return numero == other.numero;
-    }
+	public void setValor(T valor) {
+		this.numero = valor;
+	}
 }

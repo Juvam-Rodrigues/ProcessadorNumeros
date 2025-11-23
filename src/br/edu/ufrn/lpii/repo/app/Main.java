@@ -11,7 +11,7 @@ import br.edu.ufrn.lpii.repo.manipulador_arquivo.ManipuladorArquivo;
 public class Main {
 	public static void main(String args[]) {
 		ListaArquivos.armazenarCaminhos();
-		ArvoreBST arvore = new ArvoreBST();
+		ArvoreBST<Integer> arvore = new ArvoreBST<>();
 
 		System.out.println("Digite o nome do arquivo no database:");
 		Scanner scan = new Scanner(System.in);
@@ -19,10 +19,13 @@ public class Main {
 
 		try {
 			ManipuladorArquivo.lerArquivo(nome, arvore);
+			System.out.println("\nImpressão da árvore em ordem:");
 			arvore.imprimirArvoreEmOrdem(arvore.getNoRaiz());
 			arvore.dobrarValores();
-			System.out.println();
+			System.out.println("\nImpressão da árvore em ordem:");
 			arvore.imprimirArvoreEmOrdem(arvore.getNoRaiz());
+			System.out.println("\n");
+			System.out.println("O maior número presente na árvore é: " + arvore.max());
 		} catch(ArquivoNaoEncontradoException e) {
 			System.out.println(e.getMessage());
 		

@@ -10,8 +10,11 @@ import br.edu.ufrn.lpii.repo.exceptions.ErroNaReflexaoException;
 
 public class Processador {
 
-    public static void imprimirComReflectionAnotation(No no) throws ErroNaReflexaoException {
-        if (no == null) return;
+    public static <T extends Comparable<T>> void imprimirComReflectionAnotation(No<T> no) throws ErroNaReflexaoException {
+        //extende-se o comparable mesmo que não realiza-se comparações para o java não reclamar
+    	if (no == null) {
+    		return; //Se o nó é null, não adianta imprimir 
+    	}
 
         try {
             Class<?> clazz = Class.forName("br.edu.ufrn.lpii.repo.operacoes.Operacoes");
@@ -24,7 +27,7 @@ public class Processador {
 
                     // Procurando método com assinatura: void imprimir(int)
                     if (params.length == 1 && params[0] == int.class && metodo.getReturnType() == void.class) {
-                        metodo.invoke(obj, no.getNumero());
+                        metodo.invoke(obj, no.getNumero()); //Imprime o número a partir do método com as características acima
                     }
                 }
             }
@@ -36,8 +39,10 @@ public class Processador {
 
     }
 
-    public static void dobrarComReflectionAnotation(ArvoreBST arvore) throws ErroNaReflexaoException {
-        try {
+    public static <T extends Comparable<T>> void dobrarComReflectionAnotation(ArvoreBST<T> arvore) throws ErroNaReflexaoException {
+        //extende-se o comparable mesmo que não realiza-se comparações para o java não reclamar
+
+    	try {
             Class<?> clazz = Class.forName("br.edu.ufrn.lpii.repo.operacoes.Operacoes");
             Object obj = clazz.getDeclaredConstructor().newInstance();
 
@@ -48,7 +53,8 @@ public class Processador {
 
                     // Procurando método com assinatura: int dobrar(int)
                     if (params.length == 1 && params[0] == int.class && metodo.getReturnType() == int.class) {
-                        arvore.dobrarRecursivo(arvore.getNoRaiz(), obj, metodo);
+                        //Manda-se o método que dobra o número para dobrar recursivamente
+                    	arvore.dobrarRecursivo(arvore.getNoRaiz(), obj, metodo);
                     }
                 }
             }

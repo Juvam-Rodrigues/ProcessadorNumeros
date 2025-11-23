@@ -11,7 +11,7 @@ import br.edu.ufrn.lpii.repo.exceptions.NumeroNegativoOuNuloException;
 
 public class ManipuladorArquivo {
 
-	public static void lerArquivo(String nome, ArvoreBST arvore) 
+	public static void lerArquivo(String nome, ArvoreBST<Integer> arvore) 
 			throws ArquivoNaoEncontradoException {
 
 		List<String> caminhos = ListaArquivos.getCaminhos();
@@ -34,7 +34,7 @@ public class ManipuladorArquivo {
 		}
 	}
 
-	public static void preencherEstrutura(String caminho, ArvoreBST arvore){
+	public static void preencherEstrutura(String caminho, ArvoreBST<Integer> arvore){
 		File arquivo = new File(caminho);
 		
 		try (Scanner scanner = new Scanner(arquivo)) {
