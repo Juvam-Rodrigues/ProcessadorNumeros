@@ -1,12 +1,11 @@
 package br.edu.ufrn.lpii.repo.operacoes;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-
 import br.edu.ufrn.lpii.repo.anotacoes.Acao;
 import br.edu.ufrn.lpii.repo.arvore_bst_numeros.ArvoreBST;
 import br.edu.ufrn.lpii.repo.arvore_bst_numeros.No;
 import br.edu.ufrn.lpii.repo.exceptions.ErroNaReflexaoException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class Processador {
 
@@ -34,7 +33,7 @@ public class Processador {
         } catch (ClassNotFoundException | NoSuchMethodException |
                 InstantiationException | IllegalAccessException |
                 InvocationTargetException e) {
-           throw new ErroNaReflexaoException("Erro ao usar reflexão");
+           throw new ErroNaReflexaoException("Erro ao usar reflexão.");
        }
 
     }
@@ -62,7 +61,7 @@ public class Processador {
         } catch (ClassNotFoundException | NoSuchMethodException |
                  InstantiationException | IllegalAccessException |
                  InvocationTargetException e) {
-            throw new ErroNaReflexaoException("Erro ao usar reflexão");
+            throw new ErroNaReflexaoException("Erro ao usar reflexão.");
         }
     }
 }
