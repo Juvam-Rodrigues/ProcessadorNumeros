@@ -26,7 +26,7 @@ O projeto utiliza anotações (`@Processar` e `@Acao`) e reflexão para identifi
 
 <h3> 1. Preparar o arquivo de entrada </h3>
 
-Crie um arquivo `.txt` na pasta de diretórios do projeto, o qual contém números inteiros positivos, um por linha.
+Crie um arquivo `.txt` na pasta de database do projeto, o qual conterá números inteiros positivos, um por linha.
 ```
 Exemplo (`numeros.txt`):
 
@@ -55,12 +55,40 @@ Exemplo (`numeros.txt`):
 
 <h2> Estrutura do projeto</h2>
 
-```
-br.edu.ufrn.lpii.repo/
-├─ arvore_bst_numeros/   # Implementação da árvore genérica e nós
-├─ manipulador_arquivo/  # Classes para ler arquivos e preencher a estrutura
-├─ operacoes/            # Classe Operacoes com métodos anotados @Acao
-├─ exceptions/           # Exceções personalizadas
-└─ Main.java             # Classe principal para executar o programa
-```
+<ul>
+    <li><strong>src</strong>
+      <li>anotacoes
+        <li>Acao.java</li>
+        <li>Processar.java</li>
+      </li>
+      <li>app
+        <li>Main.java</li>
+      </li>
+      <li>arvore_bst_numeros
+        <li>ArvoreBST.java</li>
+        <li>No.java</li>
+      </li>
+      <li>database: aqui ficarão os arquivos a serem lidos.
+      </li>
+      <li>exceptions
+        <li>ArquivoNaoEncontradoException.java</li>
+        <li>ErroNaReflexaoException.java</li>
+        <li>NumeroNegativoOuNuloException.java</li>
+      </li>
+      <li>manipular_arquivo
+        <li>ListaArquivos.java</li>
+        <li>ManipuladorArquivo.java</li>
+      </li>
+      <li>operacoes
+        <li>Operacoes.java</li>
+        <li>Processador.java</li>
+      </li>
+    </li>
+</ul>
 
+---
+<h2>Colaboradores: </h2>
+Este projeto possui por colaborador (principais desenvolvedor):
+<ul>
+    <li>Juvam Rodrigues do Nascimento Neto (https://github.com/Juvam-Rodrigues); e</li>
+</ul>
